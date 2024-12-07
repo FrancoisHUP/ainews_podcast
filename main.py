@@ -42,13 +42,21 @@ def main():
     output_dir = "output"
     os.makedirs(output_dir, exist_ok=True)
 
+    # Save text_content to a file
+    text_file_path = "data/swix_newletter_iteration_clean_06_12_2024(1).txt"
+    with open(text_file_path, "w", encoding="utf-8") as text_file:
+        text_file.write(text_content)
+    
     # Use the date for the output filename
     output_path = os.path.join(output_dir, f"{target_date}.mp3")
     
     # TODO create the script and mp3, save the mp3
     print(f'Text content \n{text_content[:100]}\n')
 
+
+
     print(f"Converting to MP3 and saving to {output_path}...")
+
     
 
 if __name__ == "__main__":

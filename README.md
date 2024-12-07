@@ -12,21 +12,24 @@ Once you pulled the project, you need to pull the submodule (our custom podcastf
 $ git submodule update --init --recursive
 ```
 
+## Setup project
+
+**Install uv cli** 
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Create venv**
+```bash
+uv run hello.py 
+```
+
+**Activate venv**
+```bash
+$ source .venv/bin/activate
+```
+
 ## Run the project 
-
-**Active python virtual environnement** 
-
-```bash
-$ python -m venv .venv
-```
-
-```bash
-$ source .venv/Scripts/activate
-```
-
-```bash
-$ pip install -r requirements.txt
-```
 
 **Run the system**
 
@@ -45,3 +48,10 @@ Demo : https://thatupiso-podcastfy-ai-demo.hf.space/
 **Swix RSS Feed** 
 
 Link : https://buttondown.com/ainews/rss
+
+
+## Run tests
+
+```bash
+pytest tests/test_clean_rss_item.py -v
+```
