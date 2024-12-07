@@ -1,6 +1,5 @@
 from pathlib import Path
 import argparse
-import os
 from datetime import datetime
 from utils.get_data import fetch_rss, get_rss_items_by_date, get_most_recent_date
 
