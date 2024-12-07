@@ -14,7 +14,7 @@ git submodule update --init --recursive
 
 > **_NOTE:_**  You can pull the main project plus the submodule ```git pull --recurse-submodules``` or automaticly pull submodules with ```git config submodule.recurse true``` 
 
-## Setup project
+### Setup project
 
 **Install uv cli** 
 ```bash
@@ -31,13 +31,21 @@ uv run hello.py
 source .venv/bin/activate
 ```
 
-## Run the project 
+### Run the project 
 
 **Run the system**
 
 ```bash
 python main.py "https://buttondown.com/ainews/rss" --date 2024-12-06
 ```
+
+## Run tests
+
+```bash
+pytest tests/test_clean_rss_item.py -v
+```
+
+
 
 ## References
 
@@ -50,10 +58,3 @@ Demo : https://thatupiso-podcastfy-ai-demo.hf.space/
 **Swix RSS Feed** 
 
 Link : https://buttondown.com/ainews/rss
-
-
-## Run tests
-
-```bash
-pytest tests/test_clean_rss_item.py -v
-```
