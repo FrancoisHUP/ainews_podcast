@@ -2,11 +2,6 @@ import pytest
 from pathlib import Path
 from utils.clean_data import clean_rss_item
 
-def read_file(file_path):
-    """Helper function to read file content"""
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return f.read()
-
 def test_clean_rss_item_with_real_data():
     input_text = Path("data/swix_newletter_iteration_06_12_2024.txt").read_text()
     expected_output = Path("data/swix_newletter_iteration_clean_06_12_2024.txt").read_text()
