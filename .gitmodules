@@ -1,0 +1,3 @@
+[submodule "podcastfy"]
+	path = podcastfy
+	url = https://github.com/souzatharsis/podcastfy.git
