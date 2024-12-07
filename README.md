@@ -2,17 +2,15 @@
 
 This project aims to generate a complete podcast based on a newsletter feed.
 
-## Usefull links : 
+## Get started 
 
-**Podcastfy**
+**Pull submodule**
 
-Github : https://github.com/souzatharsis/podcastfy
+Once you pulled the project, you need to pull the submodule (our custom podcastfy library).
 
-Demo : https://thatupiso-podcastfy-ai-demo.hf.space/
-
-**Swix RSS Feed** 
-
-Link : https://buttondown.com/ainews/rss
+```bash
+$ git submodule update --init --recursive
+```
 
 ## Run the project 
 
@@ -35,3 +33,15 @@ $ pip install -r requirements.txt
 ```bash
 python main.py "https://buttondown.com/ainews/rss" --date 2024-12-06
 ```
+
+## References
+
+**Podcastfy**
+
+Github : https://github.com/souzatharsis/podcastfy
+
+Demo : https://thatupiso-podcastfy-ai-demo.hf.space/
+
+**Swix RSS Feed** 
+
+Link : https://buttondown.com/ainews/rss
