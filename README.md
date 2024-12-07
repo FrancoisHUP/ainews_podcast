@@ -9,7 +9,7 @@ This project aims to generate a complete podcast based on a newsletter feed.
 Once you pulled the project, you need to pull the submodule (our custom podcastfy library).
 
 ```bash
-$ git submodule update --init --recursive
+git submodule update --init --recursive
 ```
 
 > **_NOTE:_**  You can pull the main project plus the submodule ```git pull --recurse-submodules``` or automaticly pull submodules with ```git config submodule.recurse true``` 
@@ -28,7 +28,7 @@ uv run hello.py
 
 **Activate venv**
 ```bash
-$ source .venv/bin/activate
+source .venv/bin/activate
 ```
 
 ## Run the project 
