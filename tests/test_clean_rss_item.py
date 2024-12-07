@@ -1,7 +1,6 @@
 import pytest
 from pathlib import Path
-from utils.get_data import clean_rss_item, get_rss_items_by_date, fetch_rss, get_most_recent_date
-import datetime
+from utils.get_data import clean_rss_item
 
 def test_clean_rss_item_with_real_data():
     """
