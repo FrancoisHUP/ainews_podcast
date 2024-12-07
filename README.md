@@ -1,4 +1,4 @@
-# genai_podcast
+# AI News Podcast
 
 This project aims to generate a complete podcast based on a newsletter feed.
 
