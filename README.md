@@ -1,6 +1,6 @@
 # genai_podcast
 
-This project aims to generate a full podcast base on a news letter feed. 
+This project aims to generate a complete podcast based on a newsletter feed.
 
 ## Usefull links : 
 
