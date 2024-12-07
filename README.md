@@ -12,6 +12,8 @@ Once you pulled the project, you need to pull the submodule (our custom podcastf
 $ git submodule update --init --recursive
 ```
 
+> **_NOTE:_**  You can pull the main project plus the submodule ```git pull --recurse-submodules``` or automaticly pull submodules with ```git config submodule.recurse true``` 
+
 ## Setup project
 
 **Install uv cli** 
