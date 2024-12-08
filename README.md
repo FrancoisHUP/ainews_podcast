@@ -31,6 +31,7 @@ uv run hello.py
 source .venv/bin/activate
 ```
 
+
 ### Run the project 
 
 **Run the system**
@@ -38,6 +39,8 @@ source .venv/bin/activate
 ```bash
 python main.py "https://buttondown.com/ainews/rss" --date 2024-12-06
 ```
+
+
 
 ## Run tests
 
