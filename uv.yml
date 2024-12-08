@@ -1,2 +1,0 @@
-dependencies:
-  - pip: -r podcastfy/requirements.txt
