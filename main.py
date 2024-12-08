@@ -2,6 +2,7 @@ from pathlib import Path
 import argparse
 from datetime import datetime
 from utils.get_data import fetch_rss, get_rss_items_by_date, get_most_recent_date
+from tts.tts_11labs import text_to_speech, fetch_available_voices
 
 def main():
     args = parse_args()
@@ -10,11 +11,7 @@ def main():
     target_date = None
 
     output_file_path = Path("data/swix_newletter_iteration_clean_06_12_2024.txt")
-
-    if output_file_path.exists():
-        print(f"Output file {output_file_path} already exists. Exiting.")
-        return
-
+    
     # Fetch and process the RSS feed
     print(f"Fetching RSS feed from {rss_url}...")
     feed = fetch_rss(rss_url)
@@ -51,9 +48,30 @@ def main():
     output_path = output_dir/f"{target_date}.mp3"
 
     # TODO create the script and mp3, save the mp3
-    print(f'Text content \n{text_content[:100]}\n')
+    print(f'Text content \n{text_content[:100]} [...]\n')
 
     print(f"Converting to MP3 and saving to {output_path}...")
+    
+    # Fetch available voices and pick one
+    voices = fetch_available_voices()
+    if voices:
+        selected_voice_id = voices[0]["voice_id"]  # Use the first available voice
+
+        # Example dialogue
+        dialogue = """
+        Hello! Welcome to our service.
+        This is a test dialogue to demonstrate text-to-speech using Eleven Labs.
+        We hope you enjoy the results!
+        """
+
+        # Convert text to speech
+        response = text_to_speech(dialogue, voice_id=selected_voice_id)
+        if response.status_code == 200:
+            with open(output_path, "wb") as f:
+                f.write(response.content)
+            print(f"Audio saved as {output_path}")
+        else:
+            print(f"Failed to generate audio: {response.status_code}, {response.text}")
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Convert RSS feed to MP3.")
