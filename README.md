@@ -23,7 +23,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 **Create venv**
 ```bash
-uv run hello.py 
+uv sync
 ```
 
 **Activate venv**
@@ -31,6 +31,24 @@ uv run hello.py
 source .venv/bin/activate
 ```
 
+**Setup keys**
+
+Set your [ElevenLabs api key](https://elevenlabs.io/app/settings/api-keys) in ```.env``` file   
+
+```
+.
+├── data/
+├── output/
+├── ...
+├── .env
+├── main.py
+```
+
+Content of ```.env``` file   
+
+```
+ELEVENLABS_KEY=sk_...
+```
 
 ### Run the project 
 
