@@ -6,10 +6,10 @@ import os
 load_dotenv()
 
 # Retrieve the API key from the environment variables
-API_KEY = os.getenv("ELEVENLABS_KEY")
+ELEVENLABS_KEY = os.getenv("ELEVENLABS_KEY")
 
-if not API_KEY:
-    raise ValueError("API_KEY is not set in the .env file")
+if not ELEVENLABS_KEY:
+    raise ValueError("ELEVENLABS_KEY is not set in the .env file")
 
 # Eleven Labs API endpoints
 VOICES_URL = "https://api.elevenlabs.io/v1/voices"
@@ -22,7 +22,7 @@ def fetch_available_voices():
     Returns:
         list: A list of available voices with their details.
     """
-    headers = {"xi-api-key": API_KEY}
+    headers = {"xi-api-key": ELEVENLABS_KEY}
     response = requests.get(VOICES_URL, headers=headers)
 
     if response.status_code == 200:
@@ -53,7 +53,7 @@ def text_to_speech(text, output_file="output/output.mp3", voice_id=None):
 
     headers = {
         "Accept": "audio/mpeg",
-        "xi-api-key": API_KEY,
+        "xi-api-key": ELEVENLABS_KEY,
     }
 
     payload = {
