@@ -33,7 +33,7 @@ source .venv/bin/activate
 
 **Setup keys**
 
-Set your [ElevenLabs api key](https://elevenlabs.io/app/settings/api-keys) in ```.env``` file   
+Set your [ElevenLabs api key](https://elevenlabs.io/app/settings/api-keys), and [Gemini api key](https://aistudio.google.com/app/apikey) in ```.env``` file   
 
 ```
 .
@@ -48,6 +48,7 @@ Content of ```.env``` file
 
 ```
 ELEVENLABS_KEY=sk_...
+GEMINI_API_KEY=...
 ```
 
 ### Run the project 
